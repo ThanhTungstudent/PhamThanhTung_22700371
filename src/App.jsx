@@ -103,137 +103,183 @@ function App() {
             ))}
           </div>
     </div>
-    <div className="flex flex-1 gap-6 pr-22">
-        {/* Sidebar trái */}
-         <div className="w-1/4 space-y-4">
-            <div className="bg-white p-4 shadow-md rounded-lg">
-              <h2 className="font-semibold text-lg mb-2">CƠ CẤU TỔ CHỨC</h2>
-              <ul className="space-y-1 text-blue-700">
-                {/* Lãnh đạo */}
-                <li>
-                  <button
-                    onClick={() => toggleMenu("lanhdao")}
-                    className="flex justify-between w-full hover:underline"
-                  >
-                    LÃNH ĐẠO
-                    <span>{openMenu === "lanhdao" ? "▲" : "▼"}</span>
-                  </button>
-                  {openMenu === "lanhdao" && (
-                    <ul className="pl-4 text-sm text-blue-500">
-                      <li><a href="#">Hiệu trưởng</a></li>
-                      <li><a href="#">Phó hiệu trưởng</a></li>
-                    </ul>
-                  )}
-                </li>
+      <div className="flex flex-1 gap-6 w-[90%]">
+          {/* Sidebar trái */}
+          <div className="w-1/4 space-y-4">
+              <div className="bg-white p-4 shadow-md rounded-lg">
+                <h2 className="font-semibold text-lg mb-2">CƠ CẤU TỔ CHỨC</h2>
+                <ul className="space-y-1 text-blue-700">
+                  {/* Lãnh đạo */}
+                  <li>
+                    <button
+                      onClick={() => toggleMenu("lanhdao")}
+                      className="flex justify-between w-full hover:underline"
+                    >
+                      LÃNH ĐẠO
+                      <span>{openMenu === "lanhdao" ? "▲" : "▼"}</span>
+                    </button>
+                    {openMenu === "lanhdao" && (
+                      <ul className="pl-4 text-sm text-blue-500">
+                        <li><a href="#">Hiệu trưởng</a></li>
+                        <li><a href="#">Phó hiệu trưởng</a></li>
+                      </ul>
+                    )}
+                  </li>
 
-                {/* Các phòng ban */}
-                <li>
-                  <button
-                    onClick={() => toggleMenu("phongban")}
-                    className="flex justify-between w-full hover:underline"
-                  >
-                    CÁC PHÒNG BAN
-                    <span>{openMenu === "phongban" ? "▲" : "▼"}</span>
-                  </button>
-                  {openMenu === "phongban" && (
-                    <ul className="pl-4 text-sm text-blue-500">
-                      <li><a href="#">Phòng Đào tạo</a></li>
-                      <li><a href="#">Phòng Công tác sinh viên</a></li>
-                    </ul>
-                  )}
-                </li>
+                  {/* Các phòng ban */}
+                  <li>
+                    <button
+                      onClick={() => toggleMenu("phongban")}
+                      className="flex justify-between w-full hover:underline"
+                    >
+                      CÁC PHÒNG BAN
+                      <span>{openMenu === "phongban" ? "▲" : "▼"}</span>
+                    </button>
+                    {openMenu === "phongban" && (
+                      <ul className="pl-4 text-sm text-blue-500">
+                        <li><a href="#">Phòng Đào tạo</a></li>
+                        <li><a href="#">Phòng Công tác sinh viên</a></li>
+                      </ul>
+                    )}
+                  </li>
 
-                {/* Các khoa */}
-                <li>
-                  <button
-                    onClick={() => toggleMenu("khoa")}
-                    className="flex justify-between w-full hover:underline"
-                  >
-                    CÁC KHOA
-                    <span>{openMenu === "khoa" ? "▲" : "▼"}</span>
-                  </button>
-                  {openMenu === "khoa" && (
-                    <ul className="pl-4 text-sm text-blue-500">
-                      <li><a href="#">Khoa Công nghệ thông tin</a></li>
-                      <li><a href="#">Khoa Kỹ thuật cơ khí</a></li>
-                    </ul>
-                  )}
-                </li>
+                  {/* Các khoa */}
+                  <li>
+                    <button
+                      onClick={() => toggleMenu("khoa")}
+                      className="flex justify-between w-full hover:underline"
+                    >
+                      CÁC KHOA
+                      <span>{openMenu === "khoa" ? "▲" : "▼"}</span>
+                    </button>
+                    {openMenu === "khoa" && (
+                      <ul className="pl-4 text-sm text-blue-500">
+                        <li><a href="#">Khoa Công nghệ thông tin</a></li>
+                        <li><a href="#">Khoa Kỹ thuật cơ khí</a></li>
+                      </ul>
+                    )}
+                  </li>
 
-                {/* Các viện */}
-                <li><a href="#" className="hover:underline">CÁC VIỆN</a></li>
+                  {/* Các viện */}
+                  <li><a href="#" className="hover:underline">CÁC VIỆN</a></li>
 
-                {/* Các trung tâm */}
-                <li><a href="#" className="hover:underline">CÁC TRUNG TÂM</a></li>
+                  {/* Các trung tâm */}
+                  <li><a href="#" className="hover:underline">CÁC TRUNG TÂM</a></li>
 
-                {/* Các phân hiệu */}
-                <li><a href="#" className="hover:underline">CÁC PHÂN HIỆU</a></li>
+                  {/* Các phân hiệu */}
+                  <li><a href="#" className="hover:underline">CÁC PHÂN HIỆU</a></li>
 
-                {/* Đoàn thể */}
-                <li><a href="#" className="hover:underline">ĐOÀN THỂ</a></li>
-              </ul>
+                  {/* Đoàn thể */}
+                  <li><a href="#" className="hover:underline">ĐOÀN THỂ</a></li>
+                </ul>
+              </div>
+              
             </div>
-            
+            {/* Nội dung chính */}
+              
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 w-3/4">
+        {/* Box 1 */}
+        <div className="bg-white p-4 rounded-lg shadow-md relative">
+          <h2 className="font-semibold text-blue-900 border-b pb-2 mb-3">THÔNG BÁO</h2>
+          <a href="#" className="absolute top-4 right-4 text-xs text-gray-500 hover:underline">xem tất cả</a>
+          <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
+            <li>
+              Thông báo v/v kế hoạch nghỉ hè đối với sinh viên năm 2025 <span className="text-red-500 text-xs ml-2">new</span>
+            </li>
+            <li>
+              Thông báo tuyển chọn nam sinh tốt nghiệp đại học cho các trường quân đội… 
+            </li>
+          </ul>
+        </div>
+
+        {/* Box 2 */}
+        <div className="bg-white p-4 rounded-lg shadow-md relative">
+          <h2 className="font-semibold text-blue-900 border-b pb-2 mb-3">TUYỂN SINH</h2>
+          <a href="#" className="absolute top-4 right-4 text-xs text-gray-500 hover:underline">xem tất cả</a>
+          <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
+            <li>
+              Thông báo tuyển sinh đào tạo liên thông từ trình độ cao đẳng lên trình…
+            </li>
+            <li>
+              Thông báo v/v tuyển sinh đại học văn bằng hai, đợt 1 năm 2025
+            </li>
+          </ul>
+        </div>
+
+        {/* Box 3 */}
+        <div className="bg-white p-4 rounded-lg shadow-md relative">
+          <h2 className="font-semibold text-blue-900 border-b pb-2 mb-3">TIN TỨC - SỰ KIỆN</h2>
+          <a href="#" className="absolute top-4 right-4 text-xs text-gray-500 hover:underline">xem tất cả</a>
+          <div className="space-y-2 text-sm text-gray-700">
+            <img src="/avena.jpg" alt="Event" className="rounded-md w-full h-36 object-cover" />
+            <ul className="list-disc list-inside">
+              <li>AVEVA tài trợ gói phần mềm trị giá 180.000 đô Mỹ cho Đại học Công nghiệp…</li>
+              <li>Hội nghị khoa học quốc tế BAIC 2025 lần 2 tại IUH - Sức mạnh AI trong… <span className="text-red-500 text-xs ml-2">new</span></li>
+            </ul>
           </div>
-           {/* Nội dung chính */}
+        </div>
+
+        {/* Box 4 */}
+        <div className="bg-white p-4 rounded-lg shadow-md relative">
+          <h2 className="font-semibold text-blue-900 border-b pb-2 mb-3">HỢP TÁC QUỐC TẾ</h2>
+          <a href="#" className="absolute top-4 right-4 text-xs text-gray-500 hover:underline">xem tất cả</a>
+          <div className="space-y-2 text-sm text-gray-700">
+            <img src="/giaoluu.jpg" alt="Cooperation" className="rounded-md w-full h-36 object-cover" />
+            <ul className="list-disc list-inside">
+              <li>Sôi nổi hoạt động Tuần lễ giao lưu văn hóa, khoa học sinh viên quốc tế…</li>
+              <li>Đại học Công nghiệp TP. HCM tham gia dự án Green Edu Seeds của quỹ Erasmus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
             
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8 w-3/4">
-      {/* Box 1 */}
-      <div className="bg-white p-4 rounded-lg shadow-md relative">
-        <h2 className="font-semibold text-blue-900 border-b pb-2 mb-3">THÔNG BÁO</h2>
-        <a href="#" className="absolute top-4 right-4 text-xs text-gray-500 hover:underline">xem tất cả</a>
-        <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-          <li>
-            Thông báo v/v kế hoạch nghỉ hè đối với sinh viên năm 2025 <span className="text-red-500 text-xs ml-2">new</span>
-          </li>
-          <li>
-            Thông báo tuyển chọn nam sinh tốt nghiệp đại học cho các trường quân đội… 
-          </li>
-        </ul>
-      </div>
+        </div>
+        <div className="my-10 space-y-6">
+      
+      {/* Khu vực hình ảnh */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-[90%] bg-blue-500 p-5">
+        {/* Phân hiệu Quảng Ngãi */}
+        <div className="bg-blue-900 rounded-lg overflow-hidden">
+          <h2 className="text-white font-semibold p-2 text-sm">PHÂN HIỆU QUẢNG NGÃI</h2>
+          <img src="/QN03.jpg" alt="Quảng Ngãi" className="w-full h-40 object-cover" />
+        </div>
 
-      {/* Box 2 */}
-      <div className="bg-white p-4 rounded-lg shadow-md relative">
-        <h2 className="font-semibold text-blue-900 border-b pb-2 mb-3">TUYỂN SINH</h2>
-        <a href="#" className="absolute top-4 right-4 text-xs text-gray-500 hover:underline">xem tất cả</a>
-        <ul className="list-disc list-inside space-y-2 text-sm text-gray-700">
-          <li>
-            Thông báo tuyển sinh đào tạo liên thông từ trình độ cao đẳng lên trình…
-          </li>
-          <li>
-            Thông báo v/v tuyển sinh đại học văn bằng hai, đợt 1 năm 2025
-          </li>
-        </ul>
-      </div>
+        {/* Cơ sở Thanh Hóa */}
+        <div className="bg-blue-900 rounded-lg overflow-hidden">
+          <h2 className="text-white font-semibold p-2 text-sm">CƠ SỞ THANH HÓA</h2>
+          <img src="/TH03.jpg" alt="Thanh Hóa" className="w-full h-40 object-cover" />
+        </div>
 
-      {/* Box 3 */}
-      <div className="bg-white p-4 rounded-lg shadow-md relative">
-        <h2 className="font-semibold text-blue-900 border-b pb-2 mb-3">TIN TỨC - SỰ KIỆN</h2>
-        <a href="#" className="absolute top-4 right-4 text-xs text-gray-500 hover:underline">xem tất cả</a>
-        <div className="space-y-2 text-sm text-gray-700">
-          <img src="/avena.jpg" alt="Event" className="rounded-md w-full h-36 object-cover" />
-          <ul className="list-disc list-inside">
-            <li>AVEVA tài trợ gói phần mềm trị giá 180.000 đô Mỹ cho Đại học Công nghiệp…</li>
-            <li>Hội nghị khoa học quốc tế BAIC 2025 lần 2 tại IUH - Sức mạnh AI trong… <span className="text-red-500 text-xs ml-2">new</span></li>
-          </ul>
+        {/* Video và hình ảnh */}
+        <div className="bg-blue-900 rounded-lg overflow-hidden relative">
+          <h2 className="text-white font-semibold p-2 text-sm flex justify-between items-center">
+            VIDEO VÀ HÌNH ẢNH
+            <a href="#" className="text-xs underline text-gray-300 ml-2">xem tất cả</a>
+          </h2>
+          <img src="/video.jpg" alt="Video" className="w-full h-40 object-cover" />
+          {/* Icon play overlay */}
+          <div className="absolute inset-0 flex justify-center items-center">
+            <div className="bg-black bg-opacity-50 rounded-full p-2">
+              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6 4l10 6-10 6V4z" />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Box 4 */}
-      <div className="bg-white p-4 rounded-lg shadow-md relative">
-        <h2 className="font-semibold text-blue-900 border-b pb-2 mb-3">HỢP TÁC QUỐC TẾ</h2>
-        <a href="#" className="absolute top-4 right-4 text-xs text-gray-500 hover:underline">xem tất cả</a>
-        <div className="space-y-2 text-sm text-gray-700">
-          <img src="/giaoluu.jpg" alt="Cooperation" className="rounded-md w-full h-36 object-cover" />
-          <ul className="list-disc list-inside">
-            <li>Sôi nổi hoạt động Tuần lễ giao lưu văn hóa, khoa học sinh viên quốc tế…</li>
-            <li>Đại học Công nghiệp TP. HCM tham gia dự án Green Edu Seeds của quỹ Erasmus</li>
-          </ul>
-        </div>
-      </div>
+      {/* Khu vực text dưới */}
+      
     </div>
-          
-      </div>
+
+
+
+
+
+
+
+
+
       </div>
       
 
