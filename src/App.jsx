@@ -1,13 +1,3 @@
-import Cau1 from "./components/Cau1"
-import Cau10 from "./components/Cau10"
-import Cau2 from "./components/Cau2"
-import Cau3 from "./components/Cau3"
-import Cau4 from "./components/Cau4"
-import Cau5 from "./components/Cau5"
-import Cau6 from "./components/Cau6"
-import Cau7 from "./components/Cau7"
-import Cau8 from "./components/Cau8"
-import Cau9 from "./components/Cau9"
 
 
 function App() {
@@ -26,6 +16,15 @@ function App() {
           <span className="flex gap-1">
             🇻🇳 🇬🇧
           </span>
+        </div>
+      </div>
+      {/* 2. Logo + Title */}
+      <div className="flex flex-row bg-gray-400 items-start justify-center py-4 h-80">
+        <img src="/Logo_IUH.png" alt="IUH Logo" className="h-16" />
+        <div className="flex flex-col justify-center items-center">
+        <h1 className="text-2xl font-bold text-center uppercase">Bộ công thương</h1>
+        <h1 className="text-2xl font-bold text-center">ĐẠI HỌC CÔNG NGHIỆP TP. HỒ CHÍ MINH</h1>
+        <p className="text-red-600 text-sm">Đổi mới tư duy, làm giàu thêm tri thức - đời sống</p>
         </div>
       </div>
     </div>
