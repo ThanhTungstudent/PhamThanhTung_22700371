@@ -1,6 +1,21 @@
+import { useEffect } from "react";
+import { useState } from "react";
 
+const images = [
+  "/banner01.jpg",
+  "/banner02.jpg",
+  "/banner03.jpg",
+];
 
 function App() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 3000); // 3 giây đổi ảnh
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="flex flex-col min-h-screen">
       {/* 1. Top bar */}
@@ -27,46 +42,62 @@ function App() {
         <p className="text-red-600 text-sm">Đổi mới tư duy, làm giàu thêm tri thức - đời sống</p>
         </div>
       </div>
-      <div className="relative -top-50  flex justify-center">
+      <div className="relative -top-50  flex justify-center flex-col ml-20">
         {/* 3. Menu chính */}
         <div className="bg-blue-800 text-white flex justify-center space-x-6 py-2 relative w-[90%]">
-  {/* GIỚI THIỆU */}
-  <div className="group relative">
-    <button className="hover:underline">GIỚI THIỆU <span className="text-xs">▼</span></button>
-    <div className="absolute hidden group-hover:block bg-white text-black shadow-md rounded-md mt-2 w-40">
-      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Tổng quan</a>
-      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Lịch sử</a>
-      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Sứ mệnh - Tầm nhìn</a>
-    </div>
-  </div>
+          {/* GIỚI THIỆU */}
+          <div className="group relative">
+            <button className="hover:underline">GIỚI THIỆU <span className="text-xs">▼</span></button>
+            <div className="absolute hidden group-hover:block bg-white text-black shadow-md rounded-md mt-2 w-40">
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Tổng quan</a>
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Lịch sử</a>
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Sứ mệnh - Tầm nhìn</a>
+            </div>
+          </div>
 
-  {/* ĐÀO TẠO */}
-  <div className="group relative">
-    <button className="hover:underline">ĐÀO TẠO <span className="text-xs">▼</span></button>
-    <div className="absolute hidden group-hover:block bg-white text-black shadow-md rounded-md mt-2 w-40">
-      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Chương trình Đại học</a>
-      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Chương trình Sau đại học</a>
-      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Đào tạo quốc tế</a>
-    </div>
-  </div>
+          {/* ĐÀO TẠO */}
+          <div className="group relative">
+            <button className="hover:underline">ĐÀO TẠO <span className="text-xs">▼</span></button>
+            <div className="absolute hidden group-hover:block bg-white text-black shadow-md rounded-md mt-2 w-40">
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Chương trình Đại học</a>
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Chương trình Sau đại học</a>
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Đào tạo quốc tế</a>
+            </div>
+          </div>
 
-  {/* TUYỂN SINH */}
-  <div className="group relative">
-    <button className="hover:underline">TUYỂN SINH <span className="text-xs">▼</span></button>
-    <div className="absolute hidden group-hover:block bg-white text-black shadow-md rounded-md mt-2 w-40">
-      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Đại học chính quy</a>
-      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Liên thông - Văn bằng 2</a>
-      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Tuyển sinh Quốc tế</a>
-    </div>
-  </div>
+          {/* TUYỂN SINH */}
+          <div className="group relative">
+            <button className="hover:underline">TUYỂN SINH <span className="text-xs">▼</span></button>
+            <div className="absolute hidden group-hover:block bg-white text-black shadow-md rounded-md mt-2 w-40">
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Đại học chính quy</a>
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Liên thông - Văn bằng 2</a>
+              <a href="#" className="block px-4 py-2 hover:bg-gray-100">Tuyển sinh Quốc tế</a>
+            </div>
+          </div>
 
-  {/* Các menu còn lại giữ nguyên */}
-  <a href="#" className="hover:underline">NGHIÊN CỨU</a>
-  <a href="#" className="hover:underline">SINH VIÊN</a>
-  <a href="#" className="hover:underline">GIẢNG VIÊN</a>
-  <a href="#" className="hover:underline">VĂN BẰNG</a>
-</div>
+          {/* Các menu còn lại giữ nguyên */}
+          <a href="#" className="hover:underline">NGHIÊN CỨU</a>
+          <a href="#" className="hover:underline">SINH VIÊN</a>
+          <a href="#" className="hover:underline">GIẢNG VIÊN</a>
+          <a href="#" className="hover:underline">VĂN BẰNG</a>
+        </div>
+              {/* 4. Banner chính */}
+              <div className="bg-gray-200 p-4 flex justify-center items-center w-[90%]">
+          <div className="relative w-[80%] max-w-5xl overflow-hidden rounded-lg shadow-md">
+            {images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Banner ${index + 1}`}
+                className={`w-full transition-opacity duration-700 ${
+                  index === current ? "opacity-100" : "opacity-0 absolute top-0 left-0"
+                }`}
+              />
+            ))}
+          </div>
+    </div>
       </div>
+
     </div>
   )
 }
