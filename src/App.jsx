@@ -269,6 +269,53 @@ function App() {
       </div>
 
       {/* Khu vực text dưới */}
+      {/* Khu vực text dưới */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-sm w-[90%]">
+        {/* Liên hệ */}
+        <div>
+          <h3 className="font-bold text-red-700 mb-2">LIÊN HỆ</h3>
+          <p>ĐẠI HỌC CÔNG NGHIỆP TP. HỒ CHÍ MINH</p>
+          <p>Địa chỉ: Số 12 Nguyễn Văn Bảo, P.1, Q.Gò Vấp, TP.HCM</p>
+          <p>Điện thoại: <span className="text-blue-700">028 38940 390 - 100</span></p>
+          <p>Tuyển sinh: <span className="text-blue-700">028 3985 1932 - 028 3985 5858</span></p>
+          <p>Email: <span className="text-blue-700">dhcn@iuh.edu.vn</span></p>
+        </div>
+
+        {/* Hoạt động khác */}
+        <div>
+          <h3 className="font-bold text-orange-600 mb-2">HOẠT ĐỘNG KHÁC</h3>
+          <ul className="space-y-1">
+            <li>Hoạt động phục vụ cộng đồng</li>
+            <li>Sinh viên tình nguyện</li>
+            <li>CLB/Đội/Nhóm sinh viên</li>
+            <li>Kết nối doanh nghiệp</li>
+          </ul>
+        </div>
+
+        {/* Thông tin mở rộng */}
+        <div>
+          <h3 className="font-bold text-red-700 mb-2">THÔNG TIN MỞ RỘNG</h3>
+          <ul className="space-y-1">
+            <li>Báo chí viết về IUH</li>
+            <li>Khám phá IUH</li>
+            <li>Kỹ năng mềm</li>
+            <li>Bộ sưu tập</li>
+            <li>Dịch vụ sinh viên</li>
+          </ul>
+        </div>
+
+        {/* Văn bản tiện ích */}
+        <div>
+          <h3 className="font-bold text-red-700 mb-2">VĂN BẢN TIỆN ÍCH</h3>
+          <ul className="space-y-1">
+            <li>Quy chế - Quy định - Quy trình</li>
+            <li>Bao công khai</li>
+            <li>Biểu mẫu đào tạo</li>
+            <li>Quản lý khoa học</li>
+            <li>Phản hồi</li>
+          </ul>
+        </div>
+      </div>
       
     </div>
 
