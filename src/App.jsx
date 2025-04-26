@@ -268,7 +268,7 @@ function App() {
         </div>
       </div>
 
-      {/* Khu vực text dưới */}
+      
       {/* Khu vực text dưới */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-sm w-[90%]">
         {/* Liên hệ */}
@@ -317,6 +317,51 @@ function App() {
         </div>
       </div>
       
+    </div>
+
+    <div className="bg-gray-100 py-4 text-sm text-gray-700 border-t w-[90%]">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 space-y-4 md:space-y-0">
+
+        {/* Logo + Thống kê */}
+        <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+          {/* Logo */}
+          <img src="/Logo_IUH.png" alt="IUH Logo" className="h-12" />
+
+          {/* Thống kê */}
+          <div className="text-xs text-gray-600 space-y-1">
+            <div className="flex items-center space-x-2">
+              <span>👥 Số lượt truy cập:</span> 
+              <span className="font-semibold">288,835,637</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span>📅 Hôm nay:</span> 
+              <span className="font-semibold">21,987</span>
+              <span>🔵 Đang xem:</span> 
+              <span className="font-semibold">91</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Chia sẻ mạng xã hội */}
+        <div className="flex items-center space-x-2">
+          <span>Chia sẻ</span>
+          <a href="#" className="text-blue-600 hover:scale-110 transform transition">
+            <img src="/facebook.webp" alt="Facebook" className="h-6" />
+          </a>
+          <a href="#" className="text-blue-400 hover:scale-110 transform transition">
+            <img src="/tw.png" alt="Twitter" className="h-6" />
+          </a>
+          <a href="#" className="text-blue-500 hover:scale-110 transform transition">
+            <img src="/lk.webp" alt="LinkedIn" className="h-6" />
+          </a>
+        </div>
+      </div>
+
+      {/* Dòng bản quyền */}
+      <div className="mt-4 border-t pt-2 text-center text-xs text-gray-500">
+        <p>© Bản quyền 2015 - Đại học Công nghiệp Thành phố Hồ Chí Minh</p>
+        <p><em>Mọi hành động sử dụng nội dung đăng tải trên Website iuh.edu.vn phải có sự đồng ý bằng văn bản của Đại học Công nghiệp Thành phố Hồ Chí Minh.</em></p>
+      </div>
     </div>
 
 
