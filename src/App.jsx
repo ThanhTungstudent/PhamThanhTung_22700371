@@ -16,6 +16,13 @@ function App() {
     }, 3000); // 3 giây đổi ảnh
     return () => clearInterval(interval);
   }, []);
+
+  const [openMenu, setOpenMenu] = useState(null);
+
+  const toggleMenu = (menuName) => {
+    setOpenMenu(openMenu === menuName ? null : menuName);
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* 1. Top bar */}
@@ -96,7 +103,80 @@ function App() {
             ))}
           </div>
     </div>
+    <div className="flex flex-1 gap-6">
+        {/* Sidebar trái */}
+         <div className="w-1/4 space-y-4">
+      <div className="bg-white p-4 shadow-md rounded-lg">
+        <h2 className="font-semibold text-lg mb-2">CƠ CẤU TỔ CHỨC</h2>
+        <ul className="space-y-1 text-blue-700">
+          {/* Lãnh đạo */}
+          <li>
+            <button
+              onClick={() => toggleMenu("lanhdao")}
+              className="flex justify-between w-full hover:underline"
+            >
+              LÃNH ĐẠO
+              <span>{openMenu === "lanhdao" ? "▲" : "▼"}</span>
+            </button>
+            {openMenu === "lanhdao" && (
+              <ul className="pl-4 text-sm text-blue-500">
+                <li><a href="#">Hiệu trưởng</a></li>
+                <li><a href="#">Phó hiệu trưởng</a></li>
+              </ul>
+            )}
+          </li>
+
+          {/* Các phòng ban */}
+          <li>
+            <button
+              onClick={() => toggleMenu("phongban")}
+              className="flex justify-between w-full hover:underline"
+            >
+              CÁC PHÒNG BAN
+              <span>{openMenu === "phongban" ? "▲" : "▼"}</span>
+            </button>
+            {openMenu === "phongban" && (
+              <ul className="pl-4 text-sm text-blue-500">
+                <li><a href="#">Phòng Đào tạo</a></li>
+                <li><a href="#">Phòng Công tác sinh viên</a></li>
+              </ul>
+            )}
+          </li>
+
+          {/* Các khoa */}
+          <li>
+            <button
+              onClick={() => toggleMenu("khoa")}
+              className="flex justify-between w-full hover:underline"
+            >
+              CÁC KHOA
+              <span>{openMenu === "khoa" ? "▲" : "▼"}</span>
+            </button>
+            {openMenu === "khoa" && (
+              <ul className="pl-4 text-sm text-blue-500">
+                <li><a href="#">Khoa Công nghệ thông tin</a></li>
+                <li><a href="#">Khoa Kỹ thuật cơ khí</a></li>
+              </ul>
+            )}
+          </li>
+
+          {/* Các viện */}
+          <li><a href="#" className="hover:underline">CÁC VIỆN</a></li>
+
+          {/* Các trung tâm */}
+          <li><a href="#" className="hover:underline">CÁC TRUNG TÂM</a></li>
+
+          {/* Các phân hiệu */}
+          <li><a href="#" className="hover:underline">CÁC PHÂN HIỆU</a></li>
+
+          {/* Đoàn thể */}
+          <li><a href="#" className="hover:underline">ĐOÀN THỂ</a></li>
+        </ul>
       </div>
+    </div>
+      </div>
+      </div>
+      
 
     </div>
   )
