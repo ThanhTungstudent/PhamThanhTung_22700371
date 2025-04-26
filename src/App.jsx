@@ -27,6 +27,46 @@ function App() {
         <p className="text-red-600 text-sm">Đổi mới tư duy, làm giàu thêm tri thức - đời sống</p>
         </div>
       </div>
+      <div className="relative -top-50  flex justify-center">
+        {/* 3. Menu chính */}
+        <div className="bg-blue-800 text-white flex justify-center space-x-6 py-2 relative w-[90%]">
+  {/* GIỚI THIỆU */}
+  <div className="group relative">
+    <button className="hover:underline">GIỚI THIỆU <span className="text-xs">▼</span></button>
+    <div className="absolute hidden group-hover:block bg-white text-black shadow-md rounded-md mt-2 w-40">
+      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Tổng quan</a>
+      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Lịch sử</a>
+      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Sứ mệnh - Tầm nhìn</a>
+    </div>
+  </div>
+
+  {/* ĐÀO TẠO */}
+  <div className="group relative">
+    <button className="hover:underline">ĐÀO TẠO <span className="text-xs">▼</span></button>
+    <div className="absolute hidden group-hover:block bg-white text-black shadow-md rounded-md mt-2 w-40">
+      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Chương trình Đại học</a>
+      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Chương trình Sau đại học</a>
+      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Đào tạo quốc tế</a>
+    </div>
+  </div>
+
+  {/* TUYỂN SINH */}
+  <div className="group relative">
+    <button className="hover:underline">TUYỂN SINH <span className="text-xs">▼</span></button>
+    <div className="absolute hidden group-hover:block bg-white text-black shadow-md rounded-md mt-2 w-40">
+      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Đại học chính quy</a>
+      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Liên thông - Văn bằng 2</a>
+      <a href="#" className="block px-4 py-2 hover:bg-gray-100">Tuyển sinh Quốc tế</a>
+    </div>
+  </div>
+
+  {/* Các menu còn lại giữ nguyên */}
+  <a href="#" className="hover:underline">NGHIÊN CỨU</a>
+  <a href="#" className="hover:underline">SINH VIÊN</a>
+  <a href="#" className="hover:underline">GIẢNG VIÊN</a>
+  <a href="#" className="hover:underline">VĂN BẰNG</a>
+</div>
+      </div>
     </div>
   )
 }
